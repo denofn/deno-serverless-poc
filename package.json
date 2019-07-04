@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "scripts": {
+    "build": "yarn dvm build",
+    "clean": "yarn dvm clean",
+    "compile": "yarn deno bundle helloWorld.ts out.js",
+    "deno": "DENO_DIR=.deno .deno/bin/deno",
+    "dvm": "./dvm",
+    "launch": "yarn compile && ./launch",
+    "postinstall": "yarn dvm bootstrap"
+  },
+  "dependencies": {
+    "deno_ls_plugin": "^0.1.0",
+    "typescript": "^3.5.2"
+  },
+  "license": "MIT"
+}
