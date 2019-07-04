@@ -9,8 +9,8 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
-      "http://*": ["~/Library/Caches/deno/deps/http/*"],
-      "https://*": ["~/Library/Caches/deno/deps/https/*"]
+      "http://*": [".deno/deps/http/*"],
+      "https://*": [".deno/deps/https/*"]
     },
     "plugins": [{ "name": "deno_ls_plugin" }],
     "pretty": true,
