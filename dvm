@@ -4,7 +4,7 @@ function types {
 }
 
 function denoVersionTs {
-  echo "export const DENO_VERSION = \"$DENO_VERSION\";" > ./DENO_VERSION.ts;
+  echo "export const DENO_VERSION = \"$DENO_VERSION\";" > ./src/DENO_VERSION.ts;
 }
 
 function installDeno {
@@ -33,9 +33,7 @@ LOCAL_DENO_VERSION=$(cat DENO_VERSION);
 echo "Deno version:" $LOCAL_DENO_VERSION;
 
 if [ "$1" == "build" ]; then
-  echo "Building denolox, this assumes there's a deno added to \$PATH";
-  deno install denolox src/index.ts;
-  denolox -v;
+  DENO_DIR=.deno .deno/bin/deno bundle src/helloWorld.ts out.js;
 elif [ "$1" == "types" ]; then
   types;
 elif [ "$1" == "clean" ]; then
