@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/deno-serverless/deno-serverless-poc', '.' ]
+images:
+- 'gcr.io/deno-serverless/deno-serverless-poc'

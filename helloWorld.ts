@@ -1,15 +1,14 @@
-// @ts-ignore
-import { Application } from "https://deno.land/x/oak/mod.ts";
+import { serve } from "https://deno.land/std/http/server.ts";
 
-const PORT = 8080;
+const port = Deno.env().PORT || 8080;
+const s = serve(`:${port}`);
 
-(async () => {
-  const app = new Application();
+async function main() {
+  console.info(`Listening on port ${port}`);
+  for await (const req of s) {
+    console.info(`New request: ${req.url}`);
+    req.respond({ body: new TextEncoder().encode("Hello World\n") });
+  }
+}
 
-  app.use(ctx => {
-    ctx.response.body = "Hello World!";
-  });
-
-  console.log("Listening on localhost:" + PORT);
-  await app.listen("127.0.0.1:" + 8080);
-})();
+main();

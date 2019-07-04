@@ -1,3 +1,4 @@
+.deno/
 .vscode/
 node_modules/
 types/
@@ -5,10 +6,13 @@ types/
 .gitignore
 .yarnrc
 
+cloudbuild.yaml
+
 DENO_VERSION
 Dockerfile
-dvm.sh
+dvm
 helloWorld.ts
+launch
 
 LICENSE
 package.json
