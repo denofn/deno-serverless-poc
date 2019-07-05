@@ -7,7 +7,7 @@ async function main() {
   console.info(`Listening on port ${port}`);
   for await (const req of s) {
     console.info(`New request: ${req.url}`);
-    req.respond({ body: new TextEncoder().encode("Hello World\n") });
+    req.respond({ body: new TextEncoder().encode(`You are now at ${req.url}\n`) });
   }
 }
 
