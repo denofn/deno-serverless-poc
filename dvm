@@ -33,7 +33,7 @@ LOCAL_DENO_VERSION=$(cat DENO_VERSION);
 echo "Deno version:" $LOCAL_DENO_VERSION;
 
 if [ "$1" == "build" ]; then
-  DENO_DIR=.deno .deno/bin/deno bundle src/helloWorld.ts out.js;
+  DENO_DIR=.deno .deno/bin/deno bundle src/index.ts out.js;
 elif [ "$1" == "types" ]; then
   types;
 elif [ "$1" == "clean" ]; then

@@ -6,10 +6,6 @@ types/
 .gitignore
 .yarnrc
 
-cloudbuild.yaml
-
-DENO_VERSION
-Dockerfile
 dvm
 launch
 
