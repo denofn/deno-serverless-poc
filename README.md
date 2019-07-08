@@ -18,15 +18,3 @@ git clone https://github.com/denoserverless/deno-serverless-poc myProject && cd 
 docker build -t my-docker-image .
 docker run -it --init -p 8080:8080 my-docker-image
 ```
-
-## Why do I need yarn (and thus node)?
-
-For now - and for ease of use - script running is done through yarn. I am thinking of something like yarn but written for deno, I'll probably replace it with that.
-
-Performing a `yarn` auto downloads the latest version of deno locally if it's different (by comparing DENO_VERSION).
-
-## Why do you have a local copy of deno???!!!???
-
-To hack around import statements and intellisense in VSCode for scripting.
-
-As with yarn itself, this will probably change.

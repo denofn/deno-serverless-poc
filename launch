@@ -1,2 +1,0 @@
-#!/bin/bash
-DENO_DIR=.deno .deno/bin/deno -A https://deno.land/std/bundle/run.ts out.js

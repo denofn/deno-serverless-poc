@@ -1,3 +1,7 @@
 node_modules/
-.deno/gen
-.deno/deps
+.deno/
+package.json
+tsconfig.json
+yarn.lock
+.yarnrc
+types/
